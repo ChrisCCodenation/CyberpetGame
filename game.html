@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPet!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Pet Selection Screen -->
+        <div id="petSelectionScreen" class="pet-selection">
+            <h1>Choose Your Pet!</h1>
+            <button id="selectGremlin" class="pet-button">
+                <img src="./Pictures/spike_walking_cropped.gif" alt="Gremlin" class="pet-image">
+                <p>Gremlin</p>
+            </button>
+            <button id="selectWolf" class="pet-button">
+                <img src="./Pictures/Link.png" alt="Wolf" class="pet-image">
+                <p>Wolf</p>
+            </button>
+        </div>
+        
+        <!-- Main Game Area -->
+        <div id="mainGame" class="mainGame" style="display:none;">
+            <img id="petImage" src="" alt="Selected Pet">
+            <h1 class="title">KEEP THEM ALIVE</h1>
+            <p>Your pet has needs! Satisfy their hunger, hygiene, and fun by clicking on the buttons provided.</p>
+            <div class="stats-row">
+                <meter id="Feed" name="Hunger" class="stats" value="70" min="0" max="100" low="30" high="60" optimum="100">Hunger:</meter>
+                <meter id="Wash" name="Hygiene" class="stats" value="70" max="100" low="30" high="60" optimum="100">Hygiene:</meter>
+                <meter id="Play" name="Fun" class="stats" value="70" max="100" low="30" high="60" optimum="100">Fun:</meter>
+            </div>
+            <div class="options">
+                <button class="help" id="feed">
+                    <p>Feed</p>
+                </button>
+                <button class="help" id="wash">
+                    <p>Wash</p>
+                </button>
+                <button class="help" id="play">
+                    <p>Play</p>
+                </button>
+            </div>
+            <div id="gameOverText" class="game-over" style="display:none;"></div>
+            <button id="restartButton" style="display:none;">Restart Game</button>
+        </div>
+    <!-- <div class="warn">WARNING: CONTAINS SOUND</div> -->
+    <audio id="open" src="./Sounds/GameReady2.wav"></audio>
+    <audio id="gameOver" src="./Sounds/gameOver.wav"></audio><!--if hygiene or fun reach 0-->
+    <audio id="died" src="./Sounds/GameOver2.wav"></audio><!--if hunger reaches 0-->
+    <script src="script.js"></script>
+</body>
+</html>
+<!--By Mark, Chris and Rebecca
+    This is not a typo-->
